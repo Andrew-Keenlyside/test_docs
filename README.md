@@ -1,4 +1,4 @@
-[![Documentation Status](https://readthedocs.org/projects/test-docs/badge/?version=latest)](https://test-docs.readthedocs.io/en/latest/)
+[![Documentation Status](https://readthedocs.org/projects/test-docs/badge/?version=latest)](https://test-docs-networks.readthedocs.io/en/latest/)
 
 
 # **test_docs**
@@ -8,6 +8,6 @@
 test documentation
 
 ### **Documentation**
-📖 [Read the full documentation here](https://test-docs.readthedocs.io/en/latest/)
+📖 [Read the full documentation here](https://test-docs-networks.readthedocs.io/en/latest/)
 
 
