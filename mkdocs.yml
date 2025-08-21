@@ -1,7 +1,7 @@
 site_name: test_docs
 site_description: Documentation for BRIDGE
 site_url: https://Andrew-Keenlyside.github.io/test_docs/
-repo_url: https://github.com/<you>/<private-repo-name>  # leave for later if you want
+repo_url: https://github.com/Andrew-Keenlyside/test_docs  # leave for later if you want
 edit_uri: ""  # disable "Edit this page"
 
 theme:
