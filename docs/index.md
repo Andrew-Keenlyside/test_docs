@@ -1,6 +1,7 @@
 # BRIDGE
 
-<img src="assets/UCL-BRIDGE.png" alt="UCL-BRIDGE" width="60%" />
+<img src="assets/BRIDGE_logo_light.png#only-light" alt="UCL-BRIDGE" width="60%" />
+<img src="assets/BRIDGE_logo_dark.png#only-dark"  alt="UCL-BRIDGE" width="60%" />
 
 
 **B**rain **R**econstruction **I**ntegrating **D**istributed **G**raph **E**stimates
