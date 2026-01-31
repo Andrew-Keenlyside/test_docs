@@ -1,6 +1,9 @@
 # BRIDGE
 
-**B**rain **R**econstruction via **I**terative **D**irected **G**raph **E**xtraction
+<img src="assets/UCL-BRIDGE.png" alt="UCL-BRIDGE" width="60%" />
+
+
+**B**rain **R**econstruction **I**ntegrating **D**istributed **G**raph **E**stimates
 
 BRIDGE is a GPU-accelerated pipeline for reconstructing white matter fiber pathways from high-resolution 3D microscopy images. It builds a hierarchical graph representation of neural connectivity by:
 
