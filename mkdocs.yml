@@ -9,7 +9,7 @@ repo_url: https://github.com/Andrew-Keenlyside/BRIDGE
 theme:
   name: material
   logo: assets/bridge_brain_logo_dark.png
-  favicon: assets/bridge_brain_icon.png
+  favicon: assets/bridge_brain_icon.ico
   palette:
     - scheme: default
       primary: indigo
