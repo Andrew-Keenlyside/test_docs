@@ -1,0 +1,87 @@
+site_name: BRIDGE Documentation
+site_description: Brain Reconstruction via Iterative Directed Graph Extraction
+site_author: Andrew Keenlyside
+
+repo_name: Andrew-Keenlyside/BRIDGE
+repo_url: https://github.com/Andrew-Keenlyside/BRIDGE
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  
+  - Tutorials:
+    - tutorials/index.md
+    - Your First Tractography: tutorials/first-tractography.md
+    - Working with Outputs: tutorials/working-with-outputs.md
+  
+  - How-to Guides:
+    - how-to/index.md
+    - Installation: how-to/install.md
+    - Configuration: how-to/configure.md
+    - Configure GPU: how-to/configure-gpu.md
+    - Run Pipeline: how-to/run-pipeline.md
+    - Export Streamlines: how-to/export-outputs.md
+  
+  - Reference:
+    - reference/index.md
+    - API:
+      - Node Class: reference/api/node.md
+      - Graph Class: reference/api/graph.md
+      - Core 1 - Node Extraction: reference/api/core1.md
+      - Core 2 - Local Graphs: reference/api/core2.md
+      - Core 3 - Hierarchical Network: reference/api/core3.md
+    - Configuration Options: reference/config-options.md
+    - File Formats: reference/file-formats.md
+  
+  - Explanation:
+    - explanation/index.md
+    - Pipeline Architecture: explanation/architecture.md
+    - Node Extraction: explanation/node-extraction.md
+    - Graph Construction: explanation/graph-construction.md
+    - Hierarchical Network: explanation/hierarchical-network.md
+    - Pruning Strategies: explanation/pruning-strategies.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Andrew-Keenlyside
