@@ -1,6 +1,7 @@
 site_name: BRIDGE Documentation
 site_description: Brain Reconstruction via Iterative Directed Graph Extraction
 site_author: Andrew Keenlyside
+docs_dir: docs
 
 repo_name: Andrew-Keenlyside/BRIDGE
 repo_url: https://github.com/Andrew-Keenlyside/BRIDGE
