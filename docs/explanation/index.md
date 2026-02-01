@@ -1,31 +1,42 @@
 # Explanation
 
-This section provides conceptual background and design rationale for BRIDGE. Unlike tutorials and how-to guides, these documents focus on *why* things work the way they do.
+This section provides in-depth understanding of BRIDGE's design, algorithms, and implementation decisions. These documents explain *why* things work the way they do.
 
-## Architecture & Design
+## Core Concepts
 
-| Topic | Description |
-|-------|-------------|
-| [Pipeline Architecture](architecture.md) | Overall system design and data flow |
-| [Why Hierarchical Processing](hierarchical-network.md) | Rationale for multi-scale approach |
+| Document | Description |
+|----------|-------------|
+| [Pipeline Architecture](architecture.md) | Overall system design: chunking strategy, three-core pipeline, data flow |
+| [Node Extraction](node-extraction.md) | Structure tensor theory, FA computation, stochastic sampling |
+| [Graph Construction](graph-construction.md) | Edge creation, alignment filtering, segment definition, MSF pruning |
+| [Hierarchical Network](hierarchical-network.md) | Octree structure, boundary linking, sparse path representation |
+| [Pruning Strategies](pruning-strategies.md) | Parameter-free philosophy, MSF theory, state-aware extension |
 
-## Core Algorithms
+## Implementations
 
-| Topic | Description |
-|-------|-------------|
-| [Node Extraction](node-extraction.md) | Structure tensor and ODF-based detection |
-| [Graph Construction](graph-construction.md) | Edge creation, segments, and MSF |
-| [Pathfinding](pathfinding.md) | BFS-based path extraction and scoring |
-| [Pruning Strategies](pruning-strategies.md) | Parameter-free graph reduction |
+BRIDGE is available in two language implementations that share identical algorithms and data formats:
 
-## Validation & Quality
+| Document | Description |
+|----------|-------------|
+| [BRIDGE.jl (Julia)](julia-implementation.md) | Julia implementation for CPU acceleration of Core 3 and streamlines |
 
-| Topic | Description |
-|-------|-------------|
-| [Path Scoring](path-scoring.md) | Quality metrics and their interpretation |
-| [Validation Approaches](validation.md) | How to assess reconstruction quality |
+## Reading Guide
 
----
+**New to BRIDGE?** Start with [Pipeline Architecture](architecture.md) for the big picture, then read the core concept documents in order.
 
-!!! info "Understanding vs. Doing"
-    These documents explain concepts and reasoning. For step-by-step instructions, see [How-to Guides](../how-to/index.md). For API details, see [Reference](../reference/index.md).
+**Choosing an implementation?** Read [BRIDGE.jl](julia-implementation.md) to understand when to use Python vs Julia.
+
+**Tuning parameters?** The core concept documents explain what each parameter controls and why.
+
+**Writing a paper?** These documents provide the algorithmic details and citations needed for methods sections.
+
+## Implementation Summary
+
+| Stage | BRIDGE.py | BRIDGE.jl |
+|-------|-----------|-----------|
+| Core 1 (Nodes) | GPU via CuPy | CPU via ImageFiltering.jl |
+| Core 2 (Graphs) | GPU via cuGraph | In progress |
+| Core 3 (Hierarchy) | CPU | CPU with GraphBLAS (faster) |
+| Streamlines | Sequential | Multi-threaded (faster) |
+
+Both implementations read and write identical file formats, enabling hybrid workflows where GPU stages run in Python and CPU stages run in Julia.
